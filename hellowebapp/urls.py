@@ -27,6 +27,7 @@ urlpatterns = [
     url(r'^contact/$',
         TemplateView.as_view(template_name='contact.html'),
 	name='contact'),
-
+	url(r'^tools/(?P<slug>[-\w]+)/$', views.tool_detail,
+	   name='tool_detail'),	
 
 ]
